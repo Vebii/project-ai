@@ -1,58 +1,15 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "app.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "app.py"
-    }
-  ]
+	"version": 2,
+	"builds": [
+		{
+			"src": "app.py",
+			"use": "@vercel/python"
+		}
+	],
+	"routes": [
+		{
+			"src": "/(.*)",
+			"dest": "/app.py"
+		}
+	]
 }
-```
-
-4. **Scroll ke bawah**
-5. **Commit message**: `Add vercel.json`
-6. **Klik "Commit new file"**
-
-⏳ **Tunggu 1-2 menit** - Vercel auto re-deploy
-
-7. **Refresh website**
-
----
-
-### **LANGKAH 4: Force Redeploy di Vercel**
-
-Setelah edit/buat file `vercel.json`:
-
-1. **Buka Vercel Dashboard**: https://vercel.com/dashboard
-2. **Klik project** Anda (`ai-copywriting-one`)
-3. **Klik tab "Deployments"** (di bagian atas)
-4. **Klik titik tiga (•••)** di deployment paling atas
-5. **Klik "Redeploy"**
-6. **Klik "Redeploy"** lagi untuk konfirmasi
-
-⏳ **Tunggu deployment selesai** (1-2 menit)
-
-7. **Klik link website** Anda
-
----
-
-## 🎯 Verifikasi File Struktur di GitHub
-
-Pastikan struktur file di GitHub Anda seperti ini:
-```
-✅ app.py
-✅ requirements.txt
-✅ vercel.json          ← HARUS ADA!
-✅ templates/
-   └── index.html
-✅ static/
-   ├── css/
-   │   └── style.css
-   └── js/
-       └── script.js
